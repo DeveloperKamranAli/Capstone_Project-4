@@ -4,181 +4,176 @@ import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css"; // Import Swiper styles
 
-const products1 = [
+const products5 = [
   {
-    id: 1,
-    name: "Audionic Airbud 550",
-    brand: "Audionic",
-    price: 3811,
-    retailPrice: 9990,
-    discount: "62% OFF",
-    rating: 4.8,
-    reviews: 538,
-    imageUrl:
-      "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-o6fve-270x270.webp",
-    description:
-      "High-quality wireless earbuds with a comfortable fit and impressive sound clarity.",
-  },
-  {
-    id: 2,
-    name: "Anker R50i Earbuds",
-    brand: "Anker",
-    price: 4611,
-    retailPrice: 7199,
-    discount: "36% OFF",
-    rating: 4.7,
-    reviews: 30,
-    imageUrl:
-      "https://images.priceoye.pk/anker-r50i-earbuds-pakistan-priceoye-csv44-270x270.webp",
-    description:
-      "Experience premium audio quality with long battery life and fast charging capabilities.",
-  },
-  {
-    id: 3,
-    name: "Xiaomi Redmi Buds 6 Lite",
+    id: 25,
+    name: "Examine Redmi S3X",
     brand: "Xiaomi",
-    price: 5899,
-    retailPrice: 6999,
-    discount: "16% OFF",
-    rating: 4.4,
+    price: 16299,
+    retailPrice: 20999,
+    discount: "22% OFF",
+    rating: 4.8,
+    reviews: 138,
+    imageUrl:
+      "https://images.priceoye.pk/xiaomi-redmi-a3x-pakistan-priceoye-g7ueo-270x270.webp",
+    description: "Affordable mobile with excellent features and sleek design.",
+  },
+  {
+    id: 26,
+    name: "Tecno Spark Charity",
+    brand: "Tecno",
+    price: 36999,
+    retailPrice: 39999,
+    discount: "8% OFF",
+    rating: 5.0,
+    reviews: 101,
+    imageUrl:
+      "https://images.priceoye.pk/tecno-spark-30-pakistan-priceoye-rcs5e-270x270.webp",
+    description: "Budget-friendly smartphone with great performance.",
+  },
+  {
+    id: 27,
+    name: "Vivo V40e",
+    brand: "Vivo",
+    price: 89999,
+    retailPrice: 99999,
+    discount: "10% OFF",
+    rating: 5.0,
+    reviews: 50,
+    imageUrl:
+      "https://images.priceoye.pk/vivo-v40e-pakistan-priceoye-gylye-270x270.webp",
+    description: "High-quality camera and performance, perfect for daily use.",
+  },
+  {
+    id: 28,
+    name: "Idle S24",
+    brand: "Itel",
+    price: 25299,
+    retailPrice: 33999,
+    discount: "26% OFF",
+    rating: 4.8,
+    reviews: 110,
+    imageUrl:
+      "https://images.priceoye.pk/itel-s24-pakistan-priceoye-sabyj-270x270.webp",
+    description: "Stylish design and reliable performance at a great price.",
+  },
+  {
+    id: 29,
+    name: "Examine Redmi S3",
+    brand: "Xiaomi",
+    price: 19299,
+    retailPrice: 23999,
+    discount: "20% OFF",
+    rating: 4.8,
+    reviews: 295,
+    imageUrl:
+      "https://images.priceoye.pk/xiaomi-redmi-a3-pakistan-priceoye-z5m8c-270x270.webp",
+    description: "Durable and powerful mobile for everyday tasks.",
+  },
+  {
+    id: 30,
+    name: "Apple iPhone 16 Pro",
+    brand: "Apple",
+    price: 425500,
+    retailPrice: 446000,
+    discount: "5% OFF",
+    rating: 4.8,
+    reviews: 500,
+    imageUrl:
+      "https://images.priceoye.pk/apple-iphone-16-pro-pakistan-priceoye-u4pw9-270x270.webp",
+    description:
+      "Premium smartphone with cutting-edge features and luxury feel.",
+  },
+];
+
+const products6 = [
+  {
+    id: 31,
+    name: "XAML POCO C75",
+    brand: "Xiaomi",
+    price: 31999,
+    retailPrice: 36999,
+    discount: "14% OFF",
+    rating: 5.0,
     reviews: 11,
     imageUrl:
-      "https://images.priceoye.pk/xiaomi-redmi-buds-6-lite-wireless-earbuds-pakistan-priceoye-c4dfa-270x270.webp",
+      "https://images.priceoye.pk/xiaomi-poco-c75-pakistan-priceoye-aowis-270x270.webp",
     description:
-      "Lightweight earbuds featuring advanced noise cancellation and seamless connectivity.",
+      "A powerful smartphone with a sleek design and excellent performance for everyday use.",
   },
   {
-    id: 4,
-    name: "QCY T13 ANC 2",
-    brand: "QCY",
-    price: 4549,
-    retailPrice: 7399,
-    discount: "39% OFF",
-    rating: 4.1,
-    reviews: 14,
-    imageUrl:
-      "https://images.priceoye.pk/qcy-t13-anc-2-pakistan-priceoye-uvlbc-270x270.webp",
-    description:
-      "Affordable earbuds with active noise cancellation and crystal-clear audio quality.",
-  },
-  {
-    id: 5,
-    name: "Redmi Buds 6  Wireless Earbuds",
-    brand: "Xiaomi",
-    price: 4611,
-    retailPrice: 7199,
-    discount: "36% OFF",
-    rating: 4.5,
-    reviews: 60,
-    imageUrl:
-      "https://images.priceoye.pk/redmi-buds-6-active-wireless-earbuds-pakistan-priceoye-h6kkk-270x270.webp",
-    description:
-      "Durable and stylish earbuds offering superb sound quality for music and calls.",
-  },
-  {
-    id: 6,
-    name: "Soundpeats Wireless Earbuds",
-    brand: "Soundpeats",
-    price: 10518,
-    retailPrice: 14000,
-    discount: "25% OFF",
-    rating: 3.7,
-    reviews: 6,
-    imageUrl:
-      "https://images.priceoye.pk/soundpeats-engine4-wireless-earbuds-pakistan-priceoye-40ifu-270x270.webp",
-    description:
-      "Engineered for bass enthusiasts with dual drivers and ergonomic design.",
-  },
-];
-
-const products2 = [
-  {
-    id: 7,
-    name: "Soundpeats  Earbuds",
-    brand: "Soundpeats",
-    price: 10518,
-    retailPrice: 41400,
-    discount: "25% OFF",
-    rating: 4.6,
-    reviews: 13,
-    imageUrl:
-      "https://images.priceoye.pk/soundpeats-engine4-wireless-earbuds-pakistan-priceoye-40ifu-270x270.webp",
-    description:
-      "High-quality wireless earbuds with a comfortable fit and impressive sound clarity.",
-  },
-  {
-    id: 8,
-    name: "Imiki MT2 Wireless Earbuds",
-    brand: "Imiki",
-    price: 4299,
-    retailPrice: 69999,
-    discount: "39% OFF",
+    id: 32,
+    name: "Samsung Galaxy",
+    brand: "Samsung",
+    price: 22999,
+    retailPrice: 26999,
+    discount: "15% OFF",
     rating: 4.9,
-    reviews: 38,
+    reviews: 46,
     imageUrl:
-      "https://images.priceoye.pk/imilab-imiki-mt2-wireless-erbuds-pakistan-priceoye-obxhu-270x270.webp",
+      "https://images.priceoye.pk/samsung-galaxy-a06-pakistan-priceoye-lagde-270x270.webp",
     description:
-      "Experience premium audio quality with long battery life and fast charging capabilities.",
+      "A budget-friendly smartphone with a vibrant display and reliable performance.",
   },
   {
-    id: 9,
-    name: "Realme T100 Wireless Earbuds",
+    id: 33,
+    name: "Realme C75",
     brand: "Realme",
-    price: 9999,
-    retailPrice: 15999,
-    discount: "42% OFF",
+    price: 42899,
+    retailPrice: 49999,
+    discount: "14% OFF",
+    rating: 5.0,
+    reviews: 1,
+    imageUrl:
+      "https://images.priceoye.pk/realme-c75-pakistan-priceoye-spltg-270x270.webp",
+    description:
+      "A feature-packed smartphone offering excellent value for money.",
+  },
+  {
+    id: 34,
+    name: "Samsung Galaxy A16",
+    brand: "Samsung",
+    price: 51699,
+    retailPrice: 54999,
+    discount: "6% OFF",
+    rating: 5.0,
+    reviews: 1,
+    imageUrl:
+      "https://images.priceoye.pk/samsung-galaxy-a16-pakistan-priceoye-qqcnx-270x270.webp",
+    description:
+      "A reliable smartphone with long battery life and a modern design.",
+  },
+  {
+    id: 35,
+    name: "Realme C6",
+    brand: "Realme",
+    price: 19400,
+    retailPrice: 32999,
+    discount: "11% OFF",
     rating: 4.9,
-    reviews: 42,
+    reviews: 25,
     imageUrl:
-      "https://images.priceoye.pk/realme-t100-wireless-earbuds-pakistan-priceoye-tq6ud-270x270.webp",
+      "https://images.priceoye.pk/realme-c61-pakistan-priceoye-v5h3g-270x270.webp",
     description:
-      "Lightweight earbuds featuring advanced noise cancellation and seamless connectivity.",
+      "An affordable smartphone with a sleek design and efficient performance.",
   },
   {
-    id: 10,
-    name: "Anker R50i Earbuds",
-    brand: "Anker",
-    price: 4611,
-    retailPrice: 7199,
-    discount: "36% OFF",
-    rating: 4.7,
-    reviews: 31,
+    id: 36,
+    name: "Apple iPhone 16 Pro Max",
+    brand: "Apple",
+    price: 499999,
+    retailPrice: 526999,
+    discount: "5% OFF",
+    rating: 5.0,
+    reviews: 1,
     imageUrl:
-      "https://images.priceoye.pk/anker-r50i-earbuds-pakistan-priceoye-csv44-270x270.webp",
+      "https://images.priceoye.pk/apple-iphone-16-pro-max-pakistan-priceoye-v0q3c-270x270.webp",
     description:
-      "Durable earbuds offering superb sound quality for music and calls.",
-  },
-  {
-    id: 11,
-    name: "Audionic Airbud 590  Earbuds",
-    brand: "Audionic",
-    price: 3499,
-    retailPrice: 4999,
-    discount: "58% OFF",
-    rating: 4.8,
-    reviews: 45,
-    imageUrl:
-      "https://images.priceoye.pk/audionic-airbud-590-wireless-earbuds-pakistan-priceoye-tpz2q-270x270.webp",
-    description:
-      "Affordable earbuds engineered for bass enthusiasts with ergonomic design.",
-  },
-  {
-    id: 12,
-    name: "Xiaomi Wireless Earbuds",
-    brand: "Xiaomi", // Updated company name to Xiaomi
-    price: 9499,
-    retailPrice: 9499,
-    discount: "58% OFF",
-    rating: 4.8,
-    reviews: 45,
-    imageUrl:
-      "https://images.priceoye.pk/audionic-airbud-590-wireless-earbuds-pakistan-priceoye-tpz2q-270x270.webp",
-    description:
-      "Durable and stylish earbuds offering superb sound quality for music and calls.",
+      "A premium smartphone with cutting-edge technology and unmatched performance.",
   },
 ];
 
-const Products = () => {
+const Products3 = () => {
   const navigate = useNavigate();
 
   const renderProductCard = (product) => (
@@ -270,8 +265,7 @@ const Products = () => {
             className="text-secondary fw-normal"
             style={{ fontSize: "1.2rem" }}
           >
-            <sup> Rs</sup>
-            {product.price}
+            <sup> Rs</sup> {product.price}
           </Typography>
           <Box className="d-flex justify-content-between w-100 mt-1">
             <Typography
@@ -279,7 +273,8 @@ const Products = () => {
               className="text-secondary text-decoration-line-through"
               style={{ fontSize: "0.9rem" }}
             >
-              <sup> Rs</sup> {product.retailPrice}
+              <sup> Rs</sup>
+              {product.retailPrice}
             </Typography>
             <Typography
               variant="body2"
@@ -296,12 +291,12 @@ const Products = () => {
 
   return (
     <div>
-      <div className="w-100 mt-5" style={{ backgroundColor: "#F94F9A" }}>
+      <div className="w-100 mt-5" style={{ backgroundColor: "#FCE55E" }}>
         <div className="container">
           <div className="latest-product-box p-4 rounded">
             {/* Header Section */}
             <div className="d-flex justify-content-between align-items-center pl-heading mb-4">
-              <h1 className="h5 text-white">Latest Wireless Earbuds</h1>
+              <h1 className="h5 text-white">Latest Mobiles</h1>
               <span className="btn btn-light">View All</span>
             </div>
 
@@ -329,8 +324,9 @@ const Products = () => {
                 },
               }}
             >
-              {products1.map(renderProductCard)}
+              {products5.map(renderProductCard)}
             </Swiper>
+
             {/* Swiper Section */}
             <Swiper
               className="pt-5"
@@ -355,7 +351,7 @@ const Products = () => {
                 },
               }}
             >
-              {products2.map(renderProductCard)}
+              {products6.map(renderProductCard)}
             </Swiper>
           </div>
         </div>
@@ -364,4 +360,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Products3;

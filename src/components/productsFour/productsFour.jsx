@@ -4,181 +4,180 @@ import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css"; // Import Swiper styles
 
-const products1 = [
+const products7 = [
   {
-    id: 1,
-    name: "Audionic Airbud 550",
-    brand: "Audionic",
-    price: 3811,
-    retailPrice: 9990,
-    discount: "62% OFF",
-    rating: 4.8,
-    reviews: 538,
-    imageUrl:
-      "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-o6fve-270x270.webp",
-    description:
-      "High-quality wireless earbuds with a comfortable fit and impressive sound clarity.",
-  },
-  {
-    id: 2,
-    name: "Anker R50i Earbuds",
-    brand: "Anker",
-    price: 4611,
-    retailPrice: 7199,
-    discount: "36% OFF",
-    rating: 4.7,
-    reviews: 30,
-    imageUrl:
-      "https://images.priceoye.pk/anker-r50i-earbuds-pakistan-priceoye-csv44-270x270.webp",
-    description:
-      "Experience premium audio quality with long battery life and fast charging capabilities.",
-  },
-  {
-    id: 3,
-    name: "Xiaomi Redmi Buds 6 Lite",
-    brand: "Xiaomi",
-    price: 5899,
-    retailPrice: 6999,
-    discount: "16% OFF",
-    rating: 4.4,
-    reviews: 11,
-    imageUrl:
-      "https://images.priceoye.pk/xiaomi-redmi-buds-6-lite-wireless-earbuds-pakistan-priceoye-c4dfa-270x270.webp",
-    description:
-      "Lightweight earbuds featuring advanced noise cancellation and seamless connectivity.",
-  },
-  {
-    id: 4,
-    name: "QCY T13 ANC 2",
-    brand: "QCY",
-    price: 4549,
-    retailPrice: 7399,
-    discount: "39% OFF",
-    rating: 4.1,
-    reviews: 14,
-    imageUrl:
-      "https://images.priceoye.pk/qcy-t13-anc-2-pakistan-priceoye-uvlbc-270x270.webp",
-    description:
-      "Affordable earbuds with active noise cancellation and crystal-clear audio quality.",
-  },
-  {
-    id: 5,
-    name: "Redmi Buds 6  Wireless Earbuds",
-    brand: "Xiaomi",
-    price: 4611,
-    retailPrice: 7199,
-    discount: "36% OFF",
-    rating: 4.5,
-    reviews: 60,
-    imageUrl:
-      "https://images.priceoye.pk/redmi-buds-6-active-wireless-earbuds-pakistan-priceoye-h6kkk-270x270.webp",
-    description:
-      "Durable and stylish earbuds offering superb sound quality for music and calls.",
-  },
-  {
-    id: 6,
-    name: "Soundpeats Wireless Earbuds",
-    brand: "Soundpeats",
-    price: 10518,
-    retailPrice: 14000,
-    discount: "25% OFF",
+    id: 37,
+    name: "VG0T Blade Trimmer",
+    brand: "VGR",
+    price: 2559,
+    retailPrice: 5500,
+    discount: "53% OFF",
     rating: 3.7,
-    reviews: 6,
+    reviews: 71,
     imageUrl:
-      "https://images.priceoye.pk/soundpeats-engine4-wireless-earbuds-pakistan-priceoye-40ifu-270x270.webp",
+      "https://images.priceoye.pk/vgr-zero-t-blade-trimmer-v-030-pakistan-priceoye-c2lke-270x270.webp",
     description:
-      "Engineered for bass enthusiasts with dual drivers and ergonomic design.",
-  },
-];
-
-const products2 = [
-  {
-    id: 7,
-    name: "Soundpeats  Earbuds",
-    brand: "Soundpeats",
-    price: 10518,
-    retailPrice: 41400,
-    discount: "25% OFF",
-    rating: 4.6,
-    reviews: 13,
-    imageUrl:
-      "https://images.priceoye.pk/soundpeats-engine4-wireless-earbuds-pakistan-priceoye-40ifu-270x270.webp",
-    description:
-      "High-quality wireless earbuds with a comfortable fit and impressive sound clarity.",
+      "Precision blade trimmer for clean and sharp styling with a compact design.",
   },
   {
-    id: 8,
-    name: "Imiki MT2 Wireless Earbuds",
-    brand: "Imiki",
-    price: 4299,
-    retailPrice: 69999,
-    discount: "39% OFF",
-    rating: 4.9,
-    reviews: 38,
-    imageUrl:
-      "https://images.priceoye.pk/imilab-imiki-mt2-wireless-erbuds-pakistan-priceoye-obxhu-270x270.webp",
-    description:
-      "Experience premium audio quality with long battery life and fast charging capabilities.",
-  },
-  {
-    id: 9,
-    name: "Realme T100 Wireless Earbuds",
-    brand: "Realme",
-    price: 9999,
-    retailPrice: 15999,
-    discount: "42% OFF",
-    rating: 4.9,
-    reviews: 42,
-    imageUrl:
-      "https://images.priceoye.pk/realme-t100-wireless-earbuds-pakistan-priceoye-tq6ud-270x270.webp",
-    description:
-      "Lightweight earbuds featuring advanced noise cancellation and seamless connectivity.",
-  },
-  {
-    id: 10,
-    name: "Anker R50i Earbuds",
-    brand: "Anker",
-    price: 4611,
-    retailPrice: 7199,
-    discount: "36% OFF",
+    id: 38,
+    name: "Stainless Steel Blade Trimmer",
+    brand: "VGR",
+    price: 2499,
+    retailPrice: 6000,
+    discount: "58% OFF",
     rating: 4.7,
-    reviews: 31,
+    reviews: 79,
     imageUrl:
-      "https://images.priceoye.pk/anker-r50i-earbuds-pakistan-priceoye-csv44-270x270.webp",
+      "https://images.priceoye.pk/vgr-stainless-steel-blade-trimmer-v-031-pakistan-priceoye-qyjpu-270x270.webp",
     description:
-      "Durable earbuds offering superb sound quality for music and calls.",
+      "Durable stainless steel trimmer for effortless grooming and precision cuts.",
   },
   {
-    id: 11,
-    name: "Audionic Airbud 590  Earbuds",
-    brand: "Audionic",
-    price: 3499,
-    retailPrice: 4999,
-    discount: "58% OFF",
-    rating: 4.8,
-    reviews: 45,
+    id: 39,
+    name: "Personal Groomer Kit PG180",
+    brand: "Remington",
+    price: 5899,
+    retailPrice: 6900,
+    discount: "15% OFF",
+    rating: 5.0,
+    reviews: 1,
     imageUrl:
-      "https://images.priceoye.pk/audionic-airbud-590-wireless-earbuds-pakistan-priceoye-tpz2q-270x270.webp",
+      "https://images.priceoye.pk/remington-pilot-personal-groomer-kit-pg180-pakistan-priceoye-i31xi-270x270.webp",
     description:
-      "Affordable earbuds engineered for bass enthusiasts with ergonomic design.",
+      "All-in-one grooming kit for professional and home use with multiple attachments.",
   },
   {
-    id: 12,
-    name: "Xiaomi Wireless Earbuds",
-    brand: "Xiaomi", // Updated company name to Xiaomi
-    price: 9499,
-    retailPrice: 9499,
-    discount: "58% OFF",
-    rating: 4.8,
-    reviews: 45,
+    id: 40,
+    name: "Grooming Kit Shaving Machine",
+    brand: "Kemei",
+    price: 3699,
+    retailPrice: 7000,
+    discount: "47% OFF",
+    rating: 4.0,
+    reviews: 29,
     imageUrl:
-      "https://images.priceoye.pk/audionic-airbud-590-wireless-earbuds-pakistan-priceoye-tpz2q-270x270.webp",
+      "https://images.priceoye.pk/kemei-7-in-1-grooming-kit-shaving-machine-set-km-580-pakistan-priceoye-xu1d2-270x270.webp",
     description:
-      "Durable and stylish earbuds offering superb sound quality for music and calls.",
+      "Multi-purpose grooming kit for versatile shaving and trimming needs.",
+  },
+  {
+    id: 41,
+    name: "Hair and Beard Trimmer",
+    brand: "Kemei",
+    price: 1799,
+    retailPrice: 3700,
+    discount: "53% OFF",
+    rating: 4.1,
+    reviews: 102,
+    imageUrl:
+      "https://images.priceoye.pk/kemei-km-6330-hair-beard-trimmer-3-in-1-pakistan-priceoye-kge42-270x270.webp",
+    description:
+      "Compact and lightweight trimmer ideal for hair and beard grooming.",
+  },
+  {
+    id: 42,
+    name: "Graphite Series  Kit",
+    brand: "Remington",
+    price: 11399,
+    retailPrice: 11900,
+    discount: "4% OFF",
+    rating: 5.0,
+    reviews: 1942,
+    imageUrl:
+      "https://images.priceoye.pk/remington-g4-graphite-series-multi-grooming-kit-pg4000-pakistan-priceoye-9nbmc-270x270.webp",
+    description:
+      "Premium multi-grooming kit with graphite-coated blades for superior performance.",
   },
 ];
 
-const Products = () => {
+const products8 = [
+  {
+    id: 43,
+    name: "Rechargeable Electric Shaver",
+    brand: "Kemei",
+    price: 1749,
+    retailPrice: 3700,
+    discount: "53% OFF",
+    rating: 4.2,
+    reviews: 102,
+    imageUrl:
+      "https://images.priceoye.pk/kemei-3-in-1-rechargeable-electric-shaver-trimmer-km-6332-pakistan-priceoye-l0abn-270x270.webp",
+    description:
+      "Ergonomic electric shaver with rechargeable battery for hassle-free grooming.",
+  },
+  {
+    id: 44,
+    name: "USB Charging Grooming Kit",
+    brand: "Kemei",
+    price: 1849,
+    retailPrice: 3000,
+    discount: "38% OFF",
+    rating: 4.5,
+    reviews: 72,
+    imageUrl:
+      "https://images.priceoye.pk/dinglong-professional-beard-and-hair-trimmer-rf-609-pakistan-priceoye-gu6ki-270x270.webp",
+    description:
+      "Portable grooming kit with USB charging for convenience and easy handling.",
+  },
+  {
+    id: 45,
+    name: "Professional Hair Clipper",
+    brand: "Dinglong",
+    price: 2259,
+    retailPrice: 4500,
+    discount: "50% OFF",
+    rating: 4.6,
+    reviews: 88,
+    imageUrl:
+      "https://images.priceoye.pk/dinglong-professional-beard-and-hair-trimmer-rf-609-pakistan-priceoye-gu6ki-270x270.webp",
+    description:
+      "Professional-grade hair clipper with sharp blades and powerful motor.",
+  },
+  {
+    id: 46,
+    name: "Multi-Purpose Grooming Kit",
+    brand: "Kemei",
+    price: 3559,
+    retailPrice: 7000,
+    discount: "49% OFF",
+    rating: 4.8,
+    reviews: 143,
+    imageUrl:
+      "https://images.priceoye.pk/dingling-professional-rf-608b-pakistan-priceoye-47iad-270x270.webp",
+    description: "High-performance grooming kit for all-around grooming needs.",
+  },
+  {
+    id: 47,
+    name: "Advanced Shaving Machine",
+    brand: "Mi",
+    price: 4499,
+    retailPrice: 7500,
+    discount: "40% OFF",
+    rating: 4.9,
+    reviews: 111,
+    imageUrl:
+      "https://images.priceoye.pk/mi-hair-clipper-pakistan-priceoye-nwoxh-270x270.webp",
+    description:
+      "State-of-the-art shaving machine with smooth operation and durability.",
+  },
+  {
+    id: 48,
+    name: "Professional Hair Clipper 702B",
+    brand: "Kemei",
+    price: 3999,
+    retailPrice: 8000,
+    discount: "50% OFF",
+    rating: 5.0,
+    reviews: 142,
+    imageUrl:
+      "https://images.priceoye.pk/kemei-km-702b-hair-clipper-pakistan-priceoye-qw191-270x270.webp",
+    description:
+      "Advanced hair clipper with precision trimming and efficient performance.",
+  },
+];
+
+const Products4 = () => {
   const navigate = useNavigate();
 
   const renderProductCard = (product) => (
@@ -270,8 +269,7 @@ const Products = () => {
             className="text-secondary fw-normal"
             style={{ fontSize: "1.2rem" }}
           >
-            <sup> Rs</sup>
-            {product.price}
+            <sup> Rs</sup> {product.price}
           </Typography>
           <Box className="d-flex justify-content-between w-100 mt-1">
             <Typography
@@ -301,9 +299,35 @@ const Products = () => {
           <div className="latest-product-box p-4 rounded">
             {/* Header Section */}
             <div className="d-flex justify-content-between align-items-center pl-heading mb-4">
-              <h1 className="h5 text-white">Latest Wireless Earbuds</h1>
+              <h1 className="h5 text-white">Latest Trimmers Shaver</h1>
               <span className="btn btn-light">View All</span>
             </div>
+            {/* Swiper Section */}
+            <Swiper
+              className="pt-5"
+              slidesPerView={4} // Default for large screens
+              spaceBetween={15}
+              breakpoints={{
+                1200: {
+                  slidesPerView: 4, // Large screens (>= 1200px)
+                  spaceBetween: 15,
+                },
+                768: {
+                  slidesPerView: 2, // Medium screens (768px to <1200px)
+                  spaceBetween: 15,
+                },
+                576: {
+                  slidesPerView: 1, // Small screens (576px to <768px)
+                  spaceBetween: 15,
+                },
+                0: {
+                  slidesPerView: 1, // Extra small screens (<576px)
+                  spaceBetween: 10,
+                },
+              }}
+            >
+              {products7.map(renderProductCard)}
+            </Swiper>
 
             {/* Swiper Section */}
             <Swiper
@@ -329,33 +353,7 @@ const Products = () => {
                 },
               }}
             >
-              {products1.map(renderProductCard)}
-            </Swiper>
-            {/* Swiper Section */}
-            <Swiper
-              className="pt-5"
-              slidesPerView={4} // Default for large screens
-              spaceBetween={15}
-              breakpoints={{
-                1200: {
-                  slidesPerView: 4, // Large screens (>= 1200px)
-                  spaceBetween: 15,
-                },
-                768: {
-                  slidesPerView: 2, // Medium screens (768px to <1200px)
-                  spaceBetween: 15,
-                },
-                576: {
-                  slidesPerView: 1, // Small screens (576px to <768px)
-                  spaceBetween: 15,
-                },
-                0: {
-                  slidesPerView: 1, // Extra small screens (<576px)
-                  spaceBetween: 10,
-                },
-              }}
-            >
-              {products2.map(renderProductCard)}
+              {products8.map(renderProductCard)}
             </Swiper>
           </div>
         </div>
@@ -364,4 +362,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Products4;

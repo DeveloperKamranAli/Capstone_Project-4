@@ -3,182 +3,177 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css"; // Import Swiper styles
+import staticBanner from "../../assets Pic/static-banner-bnpl-v4.jpg";
 
-const products1 = [
+const products3 = [
   {
-    id: 1,
-    name: "Audionic Airbud 550",
-    brand: "Audionic",
-    price: 3811,
-    retailPrice: 9990,
-    discount: "62% OFF",
-    rating: 4.8,
-    reviews: 538,
-    imageUrl:
-      "https://images.priceoye.pk/audionic-airbud-550-pakistan-priceoye-o6fve-270x270.webp",
-    description:
-      "High-quality wireless earbuds with a comfortable fit and impressive sound clarity.",
-  },
-  {
-    id: 2,
-    name: "Anker R50i Earbuds",
-    brand: "Anker",
-    price: 4611,
-    retailPrice: 7199,
-    discount: "36% OFF",
-    rating: 4.7,
-    reviews: 30,
-    imageUrl:
-      "https://images.priceoye.pk/anker-r50i-earbuds-pakistan-priceoye-csv44-270x270.webp",
-    description:
-      "Experience premium audio quality with long battery life and fast charging capabilities.",
-  },
-  {
-    id: 3,
-    name: "Xiaomi Redmi Buds 6 Lite",
-    brand: "Xiaomi",
-    price: 5899,
-    retailPrice: 6999,
-    discount: "16% OFF",
-    rating: 4.4,
-    reviews: 11,
-    imageUrl:
-      "https://images.priceoye.pk/xiaomi-redmi-buds-6-lite-wireless-earbuds-pakistan-priceoye-c4dfa-270x270.webp",
-    description:
-      "Lightweight earbuds featuring advanced noise cancellation and seamless connectivity.",
-  },
-  {
-    id: 4,
-    name: "QCY T13 ANC 2",
-    brand: "QCY",
-    price: 4549,
-    retailPrice: 7399,
-    discount: "39% OFF",
+    id: 13,
+    name: "Huawei Watch 2 Pro",
+    brand: "Huawei",
+    price: 5799,
+    retailPrice: 7500,
+    discount: "23% OFF",
     rating: 4.1,
     reviews: 14,
     imageUrl:
-      "https://images.priceoye.pk/qcy-t13-anc-2-pakistan-priceoye-uvlbc-270x270.webp",
-    description:
-      "Affordable earbuds with active noise cancellation and crystal-clear audio quality.",
+      "https://images.priceoye.pk/ultra-smart-watch-7-in-1-pakistan-priceoye-3ybh3-270x270.webp",
+    description: "Sophisticated smart watch with exceptional battery life.",
   },
   {
-    id: 5,
-    name: "Redmi Buds 6  Wireless Earbuds",
-    brand: "Xiaomi",
-    price: 4611,
-    retailPrice: 7199,
-    discount: "36% OFF",
+    id: 14,
+    name: "Ultra Smart Watch with 7 Straps",
+    brand: "Generic",
+    price: 1679,
+    retailPrice: 8079,
+    discount: "79% OFF",
+    rating: 4.7,
+    reviews: 199,
+    imageUrl:
+      "https://images.priceoye.pk/yolo-ultron-smart-watch-pakistan-priceoye-0jv0u-270x270.webp",
+    description:
+      "Stylish and versatile smart watch with 7 interchangeable straps.",
+  },
+  {
+    id: 15,
+    name: "YOLO Ultra Smart Watch",
+    brand: "YOLO",
+    price: 7999,
+    retailPrice: 17999,
+    discount: "56% OFF",
+    rating: 4.4,
+    reviews: 10,
+    imageUrl:
+      "https://images.priceoye.pk/huawei-band-9-pakistan-priceoye-9kqv0-270x270.webp",
+    description: "Feature-packed smart watch with advanced functionality.",
+  },
+  {
+    id: 16,
+    name: "Huawei Band 9",
+    brand: "Huawei",
+    price: 9899,
+    retailPrice: 20551,
+    discount: "51% OFF",
+    rating: 5.0,
+    reviews: 26,
+    imageUrl:
+      "https://images.priceoye.pk/xiaomi-haylou-watch-2-pro-pakistan-priceoye-4n3ao-270x270.webp",
+    description: "High-performance fitness band with robust features.",
+  },
+  {
+    id: 17,
+    name: "G-Tide R1 Smart Watch",
+    brand: "G-Tide",
+    price: 9100,
+    retailPrice: 18200,
+    discount: "50% OFF",
     rating: 4.5,
     reviews: 60,
     imageUrl:
-      "https://images.priceoye.pk/redmi-buds-6-active-wireless-earbuds-pakistan-priceoye-h6kkk-270x270.webp",
-    description:
-      "Durable and stylish earbuds offering superb sound quality for music and calls.",
+      "https://images.priceoye.pk/g-tide-r1-smart-watch-pakistan-priceoye-xlubt-270x270.webp",
+    description: "Durable and reliable smart watch for everyday use.",
   },
   {
-    id: 6,
-    name: "Soundpeats Wireless Earbuds",
-    brand: "Soundpeats",
-    price: 10518,
-    retailPrice: 14000,
+    id: 18,
+    name: "Apple Watch Ultra 49mm",
+    brand: "Apple",
+    price: 224999,
+    retailPrice: 300000,
     discount: "25% OFF",
-    rating: 3.7,
-    reviews: 6,
-    imageUrl:
-      "https://images.priceoye.pk/soundpeats-engine4-wireless-earbuds-pakistan-priceoye-40ifu-270x270.webp",
-    description:
-      "Engineered for bass enthusiasts with dual drivers and ergonomic design.",
-  },
-];
-
-const products2 = [
-  {
-    id: 7,
-    name: "Soundpeats  Earbuds",
-    brand: "Soundpeats",
-    price: 10518,
-    retailPrice: 41400,
-    discount: "25% OFF",
-    rating: 4.6,
-    reviews: 13,
-    imageUrl:
-      "https://images.priceoye.pk/soundpeats-engine4-wireless-earbuds-pakistan-priceoye-40ifu-270x270.webp",
-    description:
-      "High-quality wireless earbuds with a comfortable fit and impressive sound clarity.",
-  },
-  {
-    id: 8,
-    name: "Imiki MT2 Wireless Earbuds",
-    brand: "Imiki",
-    price: 4299,
-    retailPrice: 69999,
-    discount: "39% OFF",
-    rating: 4.9,
-    reviews: 38,
-    imageUrl:
-      "https://images.priceoye.pk/imilab-imiki-mt2-wireless-erbuds-pakistan-priceoye-obxhu-270x270.webp",
-    description:
-      "Experience premium audio quality with long battery life and fast charging capabilities.",
-  },
-  {
-    id: 9,
-    name: "Realme T100 Wireless Earbuds",
-    brand: "Realme",
-    price: 9999,
-    retailPrice: 15999,
-    discount: "42% OFF",
-    rating: 4.9,
-    reviews: 42,
-    imageUrl:
-      "https://images.priceoye.pk/realme-t100-wireless-earbuds-pakistan-priceoye-tq6ud-270x270.webp",
-    description:
-      "Lightweight earbuds featuring advanced noise cancellation and seamless connectivity.",
-  },
-  {
-    id: 10,
-    name: "Anker R50i Earbuds",
-    brand: "Anker",
-    price: 4611,
-    retailPrice: 7199,
-    discount: "36% OFF",
     rating: 4.7,
-    reviews: 31,
+    reviews: 245,
     imageUrl:
-      "https://images.priceoye.pk/anker-r50i-earbuds-pakistan-priceoye-csv44-270x270.webp",
-    description:
-      "Durable earbuds offering superb sound quality for music and calls.",
-  },
-  {
-    id: 11,
-    name: "Audionic Airbud 590  Earbuds",
-    brand: "Audionic",
-    price: 3499,
-    retailPrice: 4999,
-    discount: "58% OFF",
-    rating: 4.8,
-    reviews: 45,
-    imageUrl:
-      "https://images.priceoye.pk/audionic-airbud-590-wireless-earbuds-pakistan-priceoye-tpz2q-270x270.webp",
-    description:
-      "Affordable earbuds engineered for bass enthusiasts with ergonomic design.",
-  },
-  {
-    id: 12,
-    name: "Xiaomi Wireless Earbuds",
-    brand: "Xiaomi", // Updated company name to Xiaomi
-    price: 9499,
-    retailPrice: 9499,
-    discount: "58% OFF",
-    rating: 4.8,
-    reviews: 45,
-    imageUrl:
-      "https://images.priceoye.pk/audionic-airbud-590-wireless-earbuds-pakistan-priceoye-tpz2q-270x270.webp",
-    description:
-      "Durable and stylish earbuds offering superb sound quality for music and calls.",
+      "https://images.priceoye.pk/apple-watch-ultra-49mm-pakistan-priceoye-7zgtj-270x270.webp",
+    description: "Premium smart watch with cutting-edge technology and design.",
   },
 ];
 
-const Products = () => {
+const products4 = [
+  {
+    id: 19,
+    name: "HK9 Pro Max Plus Smart Watch",
+    brand: "HK9",
+    price: 5799,
+    retailPrice: 8000,
+    discount: "27% OFF",
+    rating: 4.8,
+    reviews: 17,
+    imageUrl:
+      "https://images.priceoye.pk/hk9-pro-max-plus-smartwatch-pakistan-priceoye-4n0i7-270x270.webp",
+    description:
+      "An advanced smartwatch offering health monitoring and multi-sport tracking features.",
+  },
+  {
+    id: 20,
+    name: "Realme Smart Watch",
+    brand: "Realme",
+    price: 3499,
+    retailPrice: 14999,
+    discount: "77% OFF",
+    rating: 4.9,
+    reviews: 28,
+    imageUrl:
+      "https://images.priceoye.pk/realme-watch-pakistan-priceoye-g61ky-270x270.webp",
+    description:
+      "A stylish smartwatch with long battery life and high-resolution display.",
+  },
+  {
+    id: 21,
+    name: "Mibro Watch Lite 3 with Dual Strap",
+    brand: "Mibro",
+    price: 11999,
+    retailPrice: 22500,
+    discount: "47% OFF",
+    rating: 4.7,
+    reviews: 33,
+    imageUrl:
+      "https://images.priceoye.pk/mibro-watch-lite-3-pakistan-priceoye-nq89u-270x270.webp",
+    description: "A durable and feature-packed smartwatch with a sleek design.",
+  },
+  {
+    id: 22,
+    name: "Xiaomi Redmi Watch 5 Active",
+    brand: "Xiaomi",
+    price: 6999,
+    retailPrice: 18000,
+    discount: "52% OFF",
+    rating: 4.3,
+    reviews: 36,
+    imageUrl:
+      "https://images.priceoye.pk/xiaomi-redmi-watch-5-active-pakistan-priceoye-n4ewq-270x270.webp",
+    description:
+      "A lightweight smartwatch with fitness tracking and water resistance.",
+  },
+  {
+    id: 23,
+    name: "Apple Watch SE 44mm",
+    brand: "Apple",
+    price: 75999,
+    retailPrice: 189999,
+    discount: "60% OFF",
+    rating: 4.5,
+    reviews: 102,
+    imageUrl:
+      "https://images.priceoye.pk/apple-watch-se-44mm-pakistan-priceoye-0n7w6-270x270.webp",
+    description:
+      "Premium smartwatch with advanced features and seamless Apple ecosystem integration.",
+  },
+  {
+    id: 24,
+    name: "Huawei Fit 2 Smartwatch",
+    brand: "Huawei",
+    price: 27799,
+    retailPrice: 49999,
+    discount: "44% OFF",
+    rating: 4.9,
+    reviews: 99,
+    imageUrl:
+      "https://images.priceoye.pk/audionic-airbud-590-wireless-earbuds-pakistan-priceoye-tpz2q-270x270.webp",
+    description:
+      "A modern fitness smartwatch with personalized health insights and a vibrant display.",
+  },
+];
+
+const Products2 = () => {
   const navigate = useNavigate();
 
   const renderProductCard = (product) => (
@@ -270,8 +265,7 @@ const Products = () => {
             className="text-secondary fw-normal"
             style={{ fontSize: "1.2rem" }}
           >
-            <sup> Rs</sup>
-            {product.price}
+            <sup> Rs</sup> {product.price}
           </Typography>
           <Box className="d-flex justify-content-between w-100 mt-1">
             <Typography
@@ -296,19 +290,19 @@ const Products = () => {
 
   return (
     <div>
-      <div className="w-100 mt-5" style={{ backgroundColor: "#F94F9A" }}>
+      <div className="w-100 mt-5" style={{ backgroundColor: "#F1811D" }}>
         <div className="container">
           <div className="latest-product-box p-4 rounded">
             {/* Header Section */}
             <div className="d-flex justify-content-between align-items-center pl-heading mb-4">
-              <h1 className="h5 text-white">Latest Wireless Earbuds</h1>
+              <h1 className="h5 text-white">Latest Smart Watches</h1>
               <span className="btn btn-light">View All</span>
             </div>
 
             {/* Swiper Section */}
             <Swiper
               className="pt-5"
-              slidesPerView={4} // Default for large screens
+              slidesPerView={4}
               spaceBetween={15}
               breakpoints={{
                 1200: {
@@ -329,8 +323,9 @@ const Products = () => {
                 },
               }}
             >
-              {products1.map(renderProductCard)}
+              {products3.map(renderProductCard)}
             </Swiper>
+
             {/* Swiper Section */}
             <Swiper
               className="pt-5"
@@ -355,13 +350,14 @@ const Products = () => {
                 },
               }}
             >
-              {products2.map(renderProductCard)}
+              {products4.map(renderProductCard)}
             </Swiper>
           </div>
         </div>
       </div>
+      <img className="img-fluid" src={staticBanner} alt="banner" />
     </div>
   );
 };
 
-export default Products;
+export default Products2;
